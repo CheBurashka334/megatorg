@@ -1,0 +1,143 @@
+// sidebar
+.sidebar .menu {
+	@extend .collection;
+	@extend .z-depth-1;
+	margin-top: 0;
+	border: 0;
+	font-size: 14px;
+	color: color("grey", "darken-3");
+	overflow: visible;
+	z-index: 5;
+	.menu-item {
+		position: static;
+		margin: 0;
+		background-color: $collection-bg-color;
+		border-bottom: 1px solid $collection-border-color;
+		z-index: 1;
+	}
+	.menu-link {
+		display: block;
+		position: relative;
+		color: inherit;
+		line-height: 1.4;
+		padding: 10px 20px;
+	}
+	.submenu {
+		display: none;
+		position: absolute;
+		top: -4px;
+		left: 100%;
+		background: #fff;
+		border: 3px solid #75808e;
+		border-left: 0;
+		padding: 20px 20px 5px 30px;
+		z-index: 2;
+		box-shadow: inset 2px 0 5px 0 rgba(0, 0, 0, 0.16);
+		.submenu-item.parent {
+			margin-bottom: 20px;
+			min-width: 230px;
+			&.break-after {
+				display: inline-block;
+				margin-bottom: 0;
+			}
+			& > .menu-link {
+				color: color("grey", "darken-4");
+				font-weight: 600;
+				margin: 0 0 20px;
+				padding: 0;
+			}
+			.submenu-lvlend .menu-link {
+				padding: 3px 0;
+				margin: 2px 0;
+			}
+		}
+	}
+	.menu-item.parent {
+		&[class*="column-"] {
+			.submenu {
+				column-gap: 30px;
+			}
+		}
+		&.column-2 .submenu {
+			column-count: 2;
+		}
+		&.column-3 .submenu {
+			column-count: 3;
+		}
+		&:hover {
+			.menu-link:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: -5px;
+				z-index: 3;
+				width: 10px;
+				height: 100%;
+				background: #fff;
+			}
+			.submenu {
+				display: block;
+			}
+		}
+	}
+}
+.menus .menu-header {
+	position: relative;
+	display: block;
+	margin: 0;
+	background: color("grey", "darken-2");
+	color: #fff;
+	padding: 10px 20px;
+	width: 100%;
+	line-height: 1.5;
+	&.dropdown-btn {
+		&:after {
+			content: '>';
+			display: block;
+			position: absolute;
+			color: inherit;
+			transform: rotate(90deg) scale(1,2);
+			top: 15px;
+			right: 15px;
+			z-index: 2;
+			font-size: 12px;
+			line-height: 1;
+		}
+	}
+}
+.menu.dropdown-content {
+	margin: 0;
+	display: none;
+	min-width: 190px;
+	max-height: 650px;
+	opacity: 0;
+	position: absolute;
+	z-index: 999;
+	will-change: width, height;
+	left: auto;
+	top: 42px!important;
+	width: calc(100% - #{$gutter-width});
+}
+.sidebar .banner {
+	.banner-img {
+		display: block;
+	}
+	.banner-content {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 25px;
+		background: rgba(0,0,0,.7);
+		padding: $gutter-width/2 $gutter-width;
+	}
+	.banner-title {
+		font-size: 24px;
+		color: red;
+	}
+	.banner-text {
+		font-size: 18px;
+		color: white;
+		margin: 0;
+	}
+}

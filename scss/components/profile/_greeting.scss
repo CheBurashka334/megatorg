@@ -1,0 +1,27 @@
+/* profile -- greeting */
+.greeting {
+	.btn-profile-menu {
+		width: 160px;
+		margin-left: $gutter-width;
+	}
+}
+@media #{$medium-and-down}{
+	.greeting .section-content {
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		.btn-profile-menu {
+			flex-shrink: 0;
+		}
+	}
+}
+@media #{$small-and-down}{
+	.greeting .section-content {
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		.btn-profile-menu {
+			margin: $gutter-width/2 auto 0;
+		}
+	}
+}

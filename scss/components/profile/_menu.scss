@@ -1,0 +1,25 @@
+/* profile -- menu */
+.profile-menu {
+	@extend .l1;
+}
+.profile-menu .menu {
+	margin: 0 0 $gutter-width;
+	padding: $gutter-width/2;
+	background: #fff;
+	@extend .z-depth-1;
+	font-size: 0.875rem;
+	.menu-header {
+		font-size: 1.26rem;
+		font-weight: bolder;
+		.menu-link {
+			padding: 5px 0 10px;
+			border-bottom: 1px solid #cdcece;
+			margin-bottom: 10px;
+		}
+	}
+	.menu-link {
+		display: block;
+		padding: 10px 0;
+		color: inherit;
+	}
+}

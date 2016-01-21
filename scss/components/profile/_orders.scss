@@ -1,0 +1,14 @@
+/* profile -- orders */
+.orders-history {
+	padding-bottom: 15px;
+	.order-table {
+		margin: $gutter-width 0;
+		.table-col {
+			vertical-align: middle;
+		}
+		.detail .btn {
+			display: inline-block;
+			width: 160px;
+		}
+	}
+}

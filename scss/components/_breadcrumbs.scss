@@ -1,0 +1,20 @@
+// breadcrumbs
+.breadcrumbs {
+	font-size: 13px;
+	margin: $gutter-width 0;
+	.bcs-list {
+		padding-bottom: 1.3em;
+		border-bottom: 1px solid #cdcece;
+	}
+	.item {
+		display: inline-block;
+	}
+	a, span {
+		margin-right: 3px;
+		color: inherit;
+	}
+	a {
+		padding-right: 1em;
+		background: url('images/arr.png') right center no-repeat;
+	}
+}

@@ -1,0 +1,50 @@
+// search
+.content .search {
+	margin-bottom: $gutter-width;
+	.search-icon {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 22px;
+		height: 22px;
+		.icon {
+			fill: $primary-color;
+		}
+	}
+	.search-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		margin: 0;
+		height: 100%;
+	}
+	input[type="search"].search-field {
+		font-size: 14px;
+		padding-left: 4em;
+		padding-right: 9em;
+		height: 2.86em;
+		box-sizing: border-box;
+		margin: 0;
+		border: 0;
+		width: 100%;
+		z-index: 1;
+		&:focus,
+		&:active {
+			border-bottom: 0;
+		}
+	}
+	.card {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+@media #{$medium-and-down}{
+	.sidebar .search {
+		margin-top: $gutter-width;
+		.search-btn {
+			line-height: 2.86em;
+			height: 2.86em;
+		}
+	}
+}

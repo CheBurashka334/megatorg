@@ -1,0 +1,21 @@
+// svg
+.btn-icon {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: none;
+	padding: 2px;
+	&.small {
+		padding: 1px;
+	}
+	border: 0;
+	color: inherit;
+}
+.icon {
+	width: 100%;
+	height: 100%;
+}
+.menu-icon .btn-icon {
+	width: 35px;
+	height: 30px;
+}

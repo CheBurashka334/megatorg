@@ -1,0 +1,41 @@
+// filters
+.filters {
+	background: #fff;
+	color: color("grey" ,"darken-3");
+	font-size: 14px;
+	.filters-list {
+		padding: 0 15px;
+	}
+	.collapsible-header {
+		padding: 15px 1px;
+		font-size: 18px;
+		line-height: 1;
+		height: 50px;
+		&:after {
+			content: '>';
+			display: block;
+			position: absolute;
+			right: 5px;
+			top: 17px;
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 300;
+			color: #909090;
+			transform: scale(2,1) rotate(90deg);
+		}
+		&.active:after {
+			transform: scale(2,1) rotate(-90deg);
+		}
+	}
+	.collapsible-body {
+		padding-bottom: 10px;
+		border: 0;
+		.range-field {
+			margin: 1rem 0;
+			padding: 0 1px;
+		}
+		.price {
+			margin-top: 30px;
+		}
+	}
+} 

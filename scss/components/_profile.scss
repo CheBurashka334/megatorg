@@ -1,0 +1,52 @@
+// profile
+.profile {
+	.avatar {
+		display: inline-block;
+		margin-right: 8px;
+		width: 24px;
+		height: 24px;
+		font-size: 11px;
+		line-height: 24px;
+		text-align: center;
+		color: #212121;
+		background: #fff;
+		border: 2px solid $secondary-color;
+	}
+}
+// profile-page
+.profile-page.row {
+	margin: 0 auto;
+}
+@import 'profile/menu';
+.profile-page .profile-content {
+	//width: 80%;
+	@extend .l4;
+	@media #{$large-and-up}{
+		padding-left: $gutter-width*1.5;
+	}
+}
+@media #{$xl-only}{
+	.profile-content.m3 {
+		width: 80%!important;
+	}
+	.profile-menu {
+		width: 20%!important;
+	}
+}
+@import 'profile/greeting';
+@import 'profile/info';
+@import 'profile/coupon';
+@import 'profile/orders';
+
+.recent .catalog.view-list .item {
+	margin: 0;
+	.product-card,
+	.product-card:hover {
+		@extend .z-depth-0;
+	}
+}
+.subscribe-box {
+	.btn {
+		width: 200px;
+	}
+}

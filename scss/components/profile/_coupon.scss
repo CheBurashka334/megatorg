@@ -1,0 +1,17 @@
+/* profile -- coupon */
+.coupon-table .status-icon {
+	padding: 13px;
+}
+.coupon-table {
+	margin-bottom: 50px;
+}
+@media #{$medium-and-down}{
+	.coupon-table {
+		margin-bottom: 75px;
+	}
+}
+@media #{$small-and-down}{
+	.coupon-table {
+		margin-bottom: 0px;
+	}
+}

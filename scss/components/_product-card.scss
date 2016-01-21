@@ -1,0 +1,99 @@
+// product-card
+.product-card {
+	@extend .z-depth-1;
+	height: 450px;
+	padding: 0 1px;
+	background: #fff;
+	.product-info {
+		height: 325px;
+		border-bottom: 1px solid #ebeff2;
+		padding: $gutter-width/2;
+		font-size: 15px;
+	}
+	.item-img {
+		display: block;
+		width: 100%;
+		height: 200px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.item-name{
+		margin: $gutter-width/2 0;
+		font-size: 1rem;
+		line-height: 1.5;
+		a {
+			color: inherit;
+		}
+	}
+	.rating {
+		position: absolute;
+		bottom: 10px;
+		height: 15px;
+		.star {
+			display: inline-block;
+			width: 15px;
+			height: 100%;
+			stroke: color("yellow", "darken-2");
+			stroke-width: 30px;
+			fill: transparent;
+			margin-right: 3px;
+		}
+		.count {
+			display: inline-block;
+			margin-left: 7px;
+			line-height: 1;
+			vertical-align: top;
+			vertical-align: text-top;
+		}
+		@for $i from 1 through 5 {
+			&.rate-#{$i}{
+				@for $c from 1 through $i {
+					.star:nth-child(#{$c}){
+						fill: color("yellow", "darken-2");
+						stroke-width: 0;
+					}
+				}
+			}
+		}
+	}
+	.product-add {
+		height: 125px;
+		padding: 15px 10px 20px;
+		&:after {
+			@extend .row:after;
+		}
+	}
+	.item-price {
+		@extend .left;
+		padding-top: 15px;
+	}
+	.item-price,
+	.product-price {
+		font-size: 18px;
+		.old-price {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 0.78rem;
+			color: color("grey", "darken-1");
+			text-decoration: line-through;
+		}
+	}
+	.shopping-card {
+		float: right;
+	}
+	.compare {
+		display: block;
+		clear: both;
+		@extend .hide-on-small-only;
+		bottom: 20px;
+		position: absolute;
+	}
+	&:hover  {
+		@extend .z-depth-2;
+		.item-name {
+			text-decoration: underline;
+		}
+	}
+}
